@@ -17,6 +17,8 @@ def get_requirements(filepath:str) -> List[str]:
 
         if HYPHEN_E_DOT in requirements:
             requirements.remove(HYPHEN_E_DOT)
+        
+        return requirements
 
 setup(
     name="Gemstone_price_prediction",
