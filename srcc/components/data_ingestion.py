@@ -1,12 +1,15 @@
 import os
 import sys
-from src.logger import logging
-from src.exception import CustomException
+# from src import logger
+from srcc.logger import logging
+from srcc.exception import exception
+from exception import CustomException
+# from src.exception import CustomException
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
-from src.components.data_transformation import DataTransformation
+from srcc.components.data_transformation import DataTransformation
 
 
 ## Intitialize the Data Ingetion Configuration
@@ -47,6 +50,7 @@ class DataIngestion:
         except Exception as e:
             logging.info('Exception occured at Data Ingestion stage')
             raise CustomException(e,sys)
+            
 
 if __name__ == "__main__":
     obj = DataIngestion()
